@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "99CC83CB1D11FF1400B38641"
                BuildableName = "NetworkingKit.framework"
-               BlueprintName = "NetworkingKit"
+               BlueprintName = "NetworkingKit-iOS"
                ReferencedContainer = "container:NetworkingKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "99CC83D51D11FF1400B38641"
-               BuildableName = "NetworkingKitTests.xctest"
-               BlueprintName = "NetworkingKitTests"
+               BuildableName = "NetworkingKit-iOS Tests.xctest"
+               BlueprintName = "NetworkingKit-iOS Tests"
                ReferencedContainer = "container:NetworkingKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "99CC83CB1D11FF1400B38641"
             BuildableName = "NetworkingKit.framework"
-            BlueprintName = "NetworkingKit"
+            BlueprintName = "NetworkingKit-iOS"
             ReferencedContainer = "container:NetworkingKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,7 +66,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "99CC83CB1D11FF1400B38641"
             BuildableName = "NetworkingKit.framework"
-            BlueprintName = "NetworkingKit"
+            BlueprintName = "NetworkingKit-iOS"
             ReferencedContainer = "container:NetworkingKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,7 +84,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "99CC83CB1D11FF1400B38641"
             BuildableName = "NetworkingKit.framework"
-            BlueprintName = "NetworkingKit"
+            BlueprintName = "NetworkingKit-iOS"
             ReferencedContainer = "container:NetworkingKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
