@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+
+# iOS build files
+*.ipa
+*.app.dSYM.zip
+
+# IDE files
+UserInterfaceState.xcuserstate
+xcuserdata/
+timeline.xctimeline
+.idea/
+
+# Package manager files
+Carthage/
+Pods/
+
+# Fastlane files
+.env
+fastlane/README.md
+fastlane/report.xml
+fastlane/test_output
+
+# Ruby files
+.bundle/
