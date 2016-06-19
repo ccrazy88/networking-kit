@@ -21,6 +21,7 @@ public protocol SendableRequest: BuildableRequest, ResponseParser {
 
 public extension SendableRequest {
 
+    @discardableResult
     public func sendRequest(withSession session: URLSession,
                             handler: SendableRequestHandler<ResponseType>) -> URLSessionTask? {
         guard let request = request else {
