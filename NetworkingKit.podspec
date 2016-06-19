@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'NetworkingKit'
-  s.version = '0.0.2'
+  s.version = '0.0.3'
   s.summary = 'A small wrapper around NSURLSession for iOS'
   s.homepage = 'https://github.com/ccrazy88/networking-kit'
   s.author = { 'Chrisna Aing' => 'chrisna@chrisna.org' }
