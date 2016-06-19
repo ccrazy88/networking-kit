@@ -10,7 +10,7 @@ import Foundation
 
 public protocol JSONArrayParser: ResponseParser { }
 
-extension JSONArrayParser {
+public extension JSONArrayParser {
 
     public func parseResponse(data: Data) throws -> [[String : AnyObject]] {
         guard let

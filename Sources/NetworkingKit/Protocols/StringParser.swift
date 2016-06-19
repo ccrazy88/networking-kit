@@ -10,7 +10,7 @@ import Foundation
 
 public protocol StringParser: ResponseParser { }
 
-extension StringParser {
+public extension StringParser {
 
     public func parseResponse(data: Data) throws -> String {
         guard let string = String(data: data, encoding: .utf8) else {

@@ -18,11 +18,11 @@ public protocol Request {
 
 }
 
-extension Request {
+public extension Request {
 
-    var method: RequestMethod { return .GET }
-    var headers: [String : String] { return [:] }
-    var path: String { return "" }
-    var parameters: RequestParameters { return .KeyValue([:]) }
+    public var method: RequestMethod { return .GET }
+    public var headers: [String : String] { return [:] }
+    public var path: String { return "" }
+    public var parameters: RequestParameters { return .KeyValue([:]) }
 
 }

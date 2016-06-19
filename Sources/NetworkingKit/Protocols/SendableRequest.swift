@@ -19,7 +19,7 @@ public protocol SendableRequest: BuildableRequest, ResponseParser {
 
 }
 
-extension SendableRequest {
+public extension SendableRequest {
 
     public func sendRequest(withSession session: URLSession,
                             handler: SendableRequestHandler<ResponseType>) -> URLSessionTask? {

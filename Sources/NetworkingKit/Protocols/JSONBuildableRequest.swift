@@ -10,9 +10,9 @@ import Foundation
 
 public protocol JSONBuildableRequest: BuildableRequest { }
 
-extension JSONBuildableRequest {
+public extension JSONBuildableRequest {
 
-    var request: URLRequest? {
+    public var request: URLRequest? {
         guard let url = url else {
             return nil
         }

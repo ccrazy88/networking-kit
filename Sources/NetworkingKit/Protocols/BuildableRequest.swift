@@ -14,7 +14,7 @@ public protocol BuildableRequest: Request {
 
 }
 
-extension BuildableRequest {
+public extension BuildableRequest {
 
     public var url: URL? {
         guard
