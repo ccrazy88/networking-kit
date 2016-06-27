@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol JSONBuildableRequest: BuildableRequest { }
+public protocol JSONBuildableRequest: BuildableRequest, Request { }
 
 public extension JSONBuildableRequest {
 

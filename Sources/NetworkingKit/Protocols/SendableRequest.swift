@@ -11,7 +11,7 @@ import Foundation
 public typealias SendableRequestHandler<T> =
     (innerHandler: () throws -> (statusCode: Int, data: T)) -> Void
 
-public protocol SendableRequest: BuildableRequest, ResponseParser {
+public protocol SendableRequest: ResponseParser {
 
     @discardableResult
     func sendRequest(withSession session: URLSession,
@@ -19,7 +19,7 @@ public protocol SendableRequest: BuildableRequest, ResponseParser {
 
 }
 
-public extension SendableRequest {
+public extension SendableRequest where Self: BuildableRequest {
 
     @discardableResult
     public func sendRequest(withSession session: URLSession,

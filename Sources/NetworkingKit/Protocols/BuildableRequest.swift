@@ -8,13 +8,13 @@
 
 import Foundation
 
-public protocol BuildableRequest: Request {
+public protocol BuildableRequest {
 
     var request: URLRequest? { get }
 
 }
 
-public extension BuildableRequest {
+public extension BuildableRequest where Self: Request {
 
     public var url: URL? {
         guard
