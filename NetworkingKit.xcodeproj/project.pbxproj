@@ -24,6 +24,7 @@
 		99E99B7A1D1614AF00F48C87 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E99B751D1614AF00F48C87 /* ResponseParser.swift */; };
 		99E99B7B1D1614AF00F48C87 /* SendableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E99B761D1614AF00F48C87 /* SendableRequest.swift */; };
 		99E99B7D1D16165F00F48C87 /* NetworkingKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E99B7C1D16165F00F48C87 /* NetworkingKitError.swift */; };
+		99EC53621D383B64005E9E93 /* URLQueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC53611D383B64005E9E93 /* URLQueryItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		99E99B751D1614AF00F48C87 /* ResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		99E99B761D1614AF00F48C87 /* SendableRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendableRequest.swift; sourceTree = "<group>"; };
 		99E99B7C1D16165F00F48C87 /* NetworkingKitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingKitError.swift; sourceTree = "<group>"; };
+		99EC53611D383B64005E9E93 /* URLQueryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLQueryItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				99B636361D15F1BD0019E8BC /* String.swift */,
 				99B636301D15EBFA0019E8BC /* URLComponents.swift */,
+				99EC53611D383B64005E9E93 /* URLQueryItem.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				9903F3B21D161D8F001BADC9 /* JSONArrayParser.swift in Sources */,
 				99B6362A1D15E76A0019E8BC /* RequestMethod.swift in Sources */,
 				9903F3B01D161C80001BADC9 /* JSONObjectParser.swift in Sources */,
+				99EC53621D383B64005E9E93 /* URLQueryItem.swift in Sources */,
 				99E99B791D1614AF00F48C87 /* Request.swift in Sources */,
 				99E99B771D1614AF00F48C87 /* BuildableRequest.swift in Sources */,
 				99B636371D15F1BD0019E8BC /* String.swift in Sources */,

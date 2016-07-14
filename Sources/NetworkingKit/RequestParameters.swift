@@ -25,21 +25,9 @@ public enum RequestParameters {
     public var queryItems: [URLQueryItem] {
         switch self {
         case .KeyValue(let keyValueDictionary):
-            return keyValueDictionary.map {
-                return URLQueryItem(name: $0, value: $1)
-            }
+            return keyValueDictionary.map { URLQueryItem(name: $0, value: $1) }
         case .JSON(let jsonDictionary):
-            let queryItems = jsonDictionary.flatMap { key, value -> URLQueryItem? in
-                if let value = value as? String {
-                    return URLQueryItem(name: key, value: value)
-                } else if let
-                    jsonValue = value as? [String : AnyObject],
-                    transformedValue = String(jsonObject: jsonValue) {
-                        return URLQueryItem(name: key, value: transformedValue)
-                }
-                return nil
-            }
-            return queryItems
+            return jsonDictionary.flatMap { URLQueryItem(name: $0, value: $1) }
         }
     }
 
