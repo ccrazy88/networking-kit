@@ -53,7 +53,8 @@ public extension SendableRequest where Self: BuildableRequest {
     private func response(fromData data: Data?,
                           response: URLResponse?,
                           error: NSError?) throws -> (data: Data, response: HTTPURLResponse) {
-        if let data = data, response = response as? HTTPURLResponse {
+        if let data = data,
+           let response = response as? HTTPURLResponse {
             return (data, response)
         } else if let error = error {
             let errorMessage = error.localizedDescription

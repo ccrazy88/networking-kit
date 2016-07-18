@@ -13,9 +13,9 @@ extension URLQueryItem {
     init?(name: String, value: AnyObject) {
         if let value = value as? String {
             self.init(name: name, value: value)
-        } else if let
-            jsonValue = value as? [String : AnyObject],
-            transformedValue = String(jsonObject: jsonValue) {
+        } else if
+            let jsonValue = value as? [String : AnyObject],
+            let transformedValue = String(jsonObject: jsonValue) {
                 self.init(name: name, value: transformedValue)
         }
         return nil

@@ -13,9 +13,9 @@ public protocol JSONObjectParser: ResponseParser { }
 public extension JSONObjectParser {
 
     public func parseResponse(data: Data) throws -> [String : AnyObject] {
-        guard let
-            object = try? JSONSerialization.jsonObject(with: data, options: []),
-            dictionary = object as? [String : AnyObject] else {
+        guard
+            let object = try? JSONSerialization.jsonObject(with: data, options: []),
+            let dictionary = object as? [String : AnyObject] else {
                 throw NetworkingKitError.ResponseCouldNotBeParsed
         }
         return dictionary
