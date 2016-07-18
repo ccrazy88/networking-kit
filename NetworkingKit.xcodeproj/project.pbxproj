@@ -243,14 +243,10 @@
 				TargetAttributes = {
 					99CC83CB1D11FF1400B38641 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = UQ2F9BDGJ8;
-						DevelopmentTeamName = "Chrisna Aing";
 						ProvisioningStyle = Automatic;
 					};
 					99CC83D51D11FF1400B38641 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = UQ2F9BDGJ8;
-						DevelopmentTeamName = "Chrisna Aing";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -465,6 +461,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -485,6 +482,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -502,6 +500,7 @@
 		99CC83E41D11FF1400B38641 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "NetworkingKit-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chrisna.NetworkingKitTests;
@@ -513,6 +512,7 @@
 		99CC83E51D11FF1400B38641 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "NetworkingKit-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chrisna.NetworkingKitTests;
