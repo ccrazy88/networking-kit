@@ -2,6 +2,7 @@
 .DS_Store
 
 # iOS build files
+.build/
 *.ipa
 *.app.dSYM.zip
 
