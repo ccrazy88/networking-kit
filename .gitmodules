@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/build-scripts-ios"]
+	path = Carthage/Checkouts/build-scripts-ios
+	url = https://github.com/ccrazy88/build-scripts-ios.git

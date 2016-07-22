@@ -292,6 +292,7 @@
 				998F20181D3D8260005E0EB6 /* Frameworks */,
 				998F20191D3D8260005E0EB6 /* Headers */,
 				998F201A1D3D8260005E0EB6 /* Resources */,
+				995F3CB11D4198DA00270A0C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -328,6 +329,7 @@
 				99C1C3011D3E0E300009A21E /* Frameworks */,
 				99C1C3021D3E0E300009A21E /* Headers */,
 				99C1C3031D3E0E300009A21E /* Resources */,
+				995F3CB21D4198DF00270A0C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -364,6 +366,7 @@
 				99C1C31E1D3E10180009A21E /* Frameworks */,
 				99C1C31F1D3E10180009A21E /* Headers */,
 				99C1C3201D3E10180009A21E /* Resources */,
+				995F3CB31D4198E400270A0C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -383,7 +386,6 @@
 				99CC83C91D11FF1400B38641 /* Headers */,
 				99CC83CA1D11FF1400B38641 /* Resources */,
 				99CC83F51D12015A00B38641 /* ShellScript */,
-				99CC83F61D12015C00B38641 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -528,6 +530,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		995F3CB11D4198DA00270A0C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Carthage/Checkouts/build-scripts-ios/run_swiftlint.sh\n./Carthage/Checkouts/build-scripts-ios/set_build_number.sh\n";
+		};
+		995F3CB21D4198DF00270A0C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Carthage/Checkouts/build-scripts-ios/run_swiftlint.sh\n./Carthage/Checkouts/build-scripts-ios/set_build_number.sh\n";
+		};
+		995F3CB31D4198E400270A0C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Carthage/Checkouts/build-scripts-ios/run_swiftlint.sh\n./Carthage/Checkouts/build-scripts-ios/set_build_number.sh\n";
+		};
 		99CC83F51D12015A00B38641 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -539,20 +580,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Scripts/run_swiftlint.sh\n";
-		};
-		99CC83F61D12015C00B38641 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = ./Scripts/set_build_number.sh;
+			shellScript = "./Carthage/Checkouts/build-scripts-ios/run_swiftlint.sh\n./Carthage/Checkouts/build-scripts-ios/set_build_number.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
