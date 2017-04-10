@@ -9,16 +9,14 @@
 import Foundation
 
 extension URLQueryItem {
-
-    init?(name: String, value: AnyObject) {
+    init?(name: String, value: Any) {
         if let value = value as? String {
             self.init(name: name, value: value)
-        } else if
-            let jsonValue = value as? [String : AnyObject],
-            let transformedValue = String(jsonObject: jsonValue) {
-                self.init(name: name, value: transformedValue)
+        } else if let JSONValue = value as? [String: Any],
+            let transformedValue = String(JSONObject: JSONValue) {
+            self.init(name: name, value: transformedValue)
+        } else {
+            return nil
         }
-        return nil
     }
-
 }

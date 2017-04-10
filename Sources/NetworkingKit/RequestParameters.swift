@@ -9,26 +9,24 @@
 import Foundation
 
 public enum RequestParameters {
+    case keyValue([String: String])
+    case json([String: Any])
 
-    case KeyValue([String : String])
-    case JSON([String : AnyObject])
-
-    public var object: AnyObject {
+    public var object: Any {
         switch self {
-        case .KeyValue(let keyValueDictionary):
+        case let .keyValue(keyValueDictionary):
             return keyValueDictionary
-        case .JSON(let jsonDictionary):
+        case let .json(jsonDictionary):
             return jsonDictionary
         }
     }
 
     public var queryItems: [URLQueryItem] {
         switch self {
-        case .KeyValue(let keyValueDictionary):
+        case let .keyValue(keyValueDictionary):
             return keyValueDictionary.map { URLQueryItem(name: $0, value: $1) }
-        case .JSON(let jsonDictionary):
+        case let .json(jsonDictionary):
             return jsonDictionary.flatMap { URLQueryItem(name: $0, value: $1) }
         }
     }
-
 }

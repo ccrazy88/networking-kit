@@ -8,12 +8,10 @@
 
 import Foundation
 
-public protocol DataParser: ResponseParser { }
+public protocol DataParser: ResponseParser {}
 
 public extension DataParser {
-
     public func parseResponse(data: Data) throws -> Data {
         return data
     }
-
 }

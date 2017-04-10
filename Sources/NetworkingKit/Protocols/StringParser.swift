@@ -8,15 +8,13 @@
 
 import Foundation
 
-public protocol StringParser: ResponseParser { }
+public protocol StringParser: ResponseParser {}
 
 public extension StringParser {
-
     public func parseResponse(data: Data) throws -> String {
         guard let string = String(data: data, encoding: .utf8) else {
-            throw NetworkingKitError.ResponseCouldNotBeParsed
+            throw NetworkingKitError.responseCouldNotBeParsed
         }
         return string
     }
-
 }

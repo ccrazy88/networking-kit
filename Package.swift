@@ -1,8 +1,5 @@
+// swift-tools-version:3.1
+
 import PackageDescription
 
-let package = Package(
-   name: "NetworkingKit",
-   targets: [
-       Target(name: "NetworkingKit")
-   ]
-)
+let package = Package(name: "networking-kit")

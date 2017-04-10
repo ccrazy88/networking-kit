@@ -8,30 +8,24 @@
 
 import Foundation
 
-public enum NetworkingKitError: ErrorProtocol {
-
-    case Fallback
-    case RequestMalformed
-    case ResponseMalformed
-    case ResponseCouldNotBeParsed
-    case ResponseContainsErrorMessage(message: String)
-    case HTTPStatusUnauthorized
+public enum NetworkingKitError: Error {
+    case fallback
+    case requestMalformed
+    case responseMalformed
+    case responseCouldNotBeParsed
+    case responseContainsErrorMessage(message: String)
+    case httpStatusUnauthorized
 
     public var localizedDescription: String {
         switch self {
-        case .Fallback, .RequestMalformed, .ResponseMalformed, .ResponseCouldNotBeParsed:
-            return NSLocalizedString(
-                "Sorry, something bad happened! Please try again.",
-                comment: "Generic request error message"
-            )
-        case .ResponseContainsErrorMessage(let message):
+        case .fallback, .requestMalformed, .responseMalformed, .responseCouldNotBeParsed:
+            return NSLocalizedString("Sorry, something bad happened! Please try again.",
+                                     comment: "Generic request error message")
+        case let .responseContainsErrorMessage(message):
             return message
-        case .HTTPStatusUnauthorized:
-            return NSLocalizedString(
-                "You need to be authenticated to execute this request.",
-                comment: "Unauthorized error message"
-            )
+        case .httpStatusUnauthorized:
+            return NSLocalizedString("You need to be authenticated to execute this request.",
+                                     comment: "Unauthorized error message")
         }
     }
-
 }

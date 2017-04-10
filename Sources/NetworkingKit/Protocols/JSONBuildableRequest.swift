@@ -8,10 +8,9 @@
 
 import Foundation
 
-public protocol JSONBuildableRequest: BuildableRequest, Request { }
+public protocol JSONBuildableRequest: BuildableRequest, Request {}
 
 public extension JSONBuildableRequest {
-
     public var request: URLRequest? {
         guard let url = url else {
             return nil
@@ -23,7 +22,7 @@ public extension JSONBuildableRequest {
         request.allHTTPHeaderFields = headers
 
         switch method {
-        case .PATCH, .POST:
+        case .patch, .post:
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             do {
                 let bodyObject = parameters.object
@@ -32,11 +31,10 @@ public extension JSONBuildableRequest {
             } catch {
                 return nil
             }
-        case .CONNECT, .DELETE, .GET, .HEAD, .OPTIONS, .PUT, .TRACE:
+        case .connect, .delete, .get, .head, .options, .put, .trace:
             break
         }
 
         return request
     }
-
 }

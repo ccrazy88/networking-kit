@@ -8,17 +8,14 @@
 
 import Foundation
 
-public protocol JSONArrayParser: ResponseParser { }
+public protocol JSONArrayParser: ResponseParser {}
 
 public extension JSONArrayParser {
-
-    public func parseResponse(data: Data) throws -> [[String : AnyObject]] {
-        guard
-            let object = try? JSONSerialization.jsonObject(with: data, options: []),
-            let array = object as? [[String : AnyObject]] else {
-                throw NetworkingKitError.ResponseCouldNotBeParsed
+    public func parseResponse(data: Data) throws -> [[String: Any]] {
+        guard let object = try? JSONSerialization.jsonObject(with: data, options: []),
+            let array = object as? [[String: Any]] else {
+            throw NetworkingKitError.responseCouldNotBeParsed
         }
         return array
     }
-
 }

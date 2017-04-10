@@ -10,4 +10,4 @@ import XCTest
 
 @testable import NetworkingKit
 
-final class NetworkingKitTests: XCTestCase { }
+final class NetworkingKitTests: XCTestCase {}

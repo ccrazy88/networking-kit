@@ -9,9 +9,6 @@
 import Foundation
 
 public protocol ResponseParser {
-
     associatedtype ResponseType
-
     func parseResponse(data: Data) throws -> ResponseType
-
 }

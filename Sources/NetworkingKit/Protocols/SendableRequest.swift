@@ -9,34 +9,30 @@
 import Foundation
 
 public typealias SendableRequestHandler<T> =
-    (innerHandler: () throws -> (statusCode: Int, data: T)) -> Void
+    (_ innerHandler: () throws -> (statusCode: Int, data: T)) -> Void
 
 public protocol SendableRequest: ResponseParser {
-
     @discardableResult
-    func sendRequest(withSession session: URLSession,
-                     handler: SendableRequestHandler<ResponseType>) -> URLSessionTask?
-
+    func send(with session: URLSession,
+              handler: SendableRequestHandler<ResponseType>) -> URLSessionTask?
 }
 
 public extension SendableRequest where Self: BuildableRequest {
-
     @discardableResult
-    public func sendRequest(withSession session: URLSession,
-                            handler: SendableRequestHandler<ResponseType>) -> URLSessionTask? {
+    public func send(with session: URLSession,
+                     handler: @escaping SendableRequestHandler<ResponseType>) -> URLSessionTask? {
         guard let request = request else {
-            handler { throw NetworkingKitError.RequestMalformed }
+            handler { throw NetworkingKitError.requestMalformed }
             return nil
         }
 
         let task = session.dataTask(with: request) { data, response, error in
             do {
-                let (data, response) = try self.response(fromData: data,
-                                                         response: response,
-                                                         error: error)
+                let (data, response) =
+                    try self.response(from: data, response: response, error: error)
                 switch response.statusCode {
                 case 401:
-                    handler { throw NetworkingKitError.HTTPStatusUnauthorized }
+                    handler { throw NetworkingKitError.httpStatusUnauthorized }
                 default:
                     let parsedData = try self.parseResponse(data: data)
                     handler { return (response.statusCode, parsedData) }
@@ -50,18 +46,16 @@ public extension SendableRequest where Self: BuildableRequest {
         return task
     }
 
-    private func response(fromData data: Data?,
+    private func response(from data: Data?,
                           response: URLResponse?,
-                          error: NSError?) throws -> (data: Data, response: HTTPURLResponse) {
-        if let data = data,
-           let response = response as? HTTPURLResponse {
+                          error: Error?) throws -> (data: Data, response: HTTPURLResponse) {
+        if let data = data, let response = response as? HTTPURLResponse {
             return (data, response)
         } else if let error = error {
             let errorMessage = error.localizedDescription
-            throw NetworkingKitError.ResponseContainsErrorMessage(message: errorMessage)
+            throw NetworkingKitError.responseContainsErrorMessage(message: errorMessage)
         } else {
-            throw NetworkingKitError.ResponseMalformed
+            throw NetworkingKitError.responseMalformed
         }
     }
-
 }

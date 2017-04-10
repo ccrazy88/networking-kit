@@ -9,14 +9,12 @@
 import Foundation
 
 extension String {
-
-    init?(jsonObject: AnyObject) {
+    init?(JSONObject: Any) {
         do {
-            let data = try JSONSerialization.data(withJSONObject: jsonObject, options: [])
+            let data = try JSONSerialization.data(withJSONObject: JSONObject, options: [])
             self.init(data: data, encoding: .utf8)
         } catch {
             return nil
         }
     }
-
 }

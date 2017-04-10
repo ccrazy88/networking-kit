@@ -9,15 +9,13 @@
 import Foundation
 
 public enum RequestMethod: String {
-
-    case GET
-    case HEAD
-    case POST
-    case PUT
-    case DELETE
-    case CONNECT
-    case OPTIONS
-    case TRACE
-    case PATCH
-
+    case get
+    case head
+    case post
+    case put
+    case delete
+    case connect
+    case options
+    case trace
+    case patch
 }
